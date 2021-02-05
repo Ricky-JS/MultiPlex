@@ -1,0 +1,33 @@
+{
+  "Status": {
+    "Online": "<:Online:710551293273440348>",
+    "Restarting": "<:Restarting:710551291964948649>",
+    "Offline": "<:Offline:710551292350824530>",
+    "Streaming": "<:Streaming:775617556747780166>",
+    "DND": "<:DND:775671175602634763>",
+    "Error": "<:Error:710551408318873671>",
+    "Outage": "<:Outage:710551507262636092>"
+                },
+
+  "HypeSquad": {
+    "bravery": "<:bravery:761828726139912192>",
+    "balance": "<:balance:761828725989441567>",
+    "brilliance": "<:brilliance:761828726052093973>"
+                },
+
+  "Other": {
+    "alert": "<a:alert:763103278556381214>",
+    "tick": "<a:tick:761828801528201239>",
+    "loading": "<a:loading:761828801356890143>",
+    "creator": "<:creator:712138050880143430>",
+    "code": "<:code:712138050632941620>",
+    "arrow": "<a:arrow:710551490598797454>",
+    "Agree": "<:Agree:713424287511478375>",
+    "Disagree": "<:Disagree:713424286685331486>",
+    "xmark": "<:xmark:761828801474723870>",
+    "support": "<:support:712138052146823233>",
+    "bots": "<:bots:779686609552539668>",
+    "members": "<:members:779686609376772157>"
+          }
+
+}
