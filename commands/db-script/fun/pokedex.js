@@ -1,6 +1,8 @@
 module.exports = ({
     name: "pokedex",
     aliases: ["dex"],
+    description: "Find some cool Pokedex!",
+    usage: "m?pokedex <pokemon>",
     code: `
 $thumbnail[$api[https://some-random-api.ml/pokedex?pokemon=$message[];sprites;animated]]
 $color[ff0500]

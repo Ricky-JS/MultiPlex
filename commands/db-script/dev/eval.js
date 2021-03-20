@@ -1,10 +1,11 @@
-const token = require('C:/Users/fredd/OneDrive/Documents/Eyaqtron/Eyaqtron/config/dev.json')
 module.exports = ({
 name: "eval",
+aliases: ["ev"],
 code: `
 \`\`\`js
 $djsEval[$message[]]
 \`\`\`
-$onlyIf[$message[1]!=;Arg lol]
+$suppressErrors[]
+$onlyIf[$message[1]!=;]
 $onlyForUsers[$getVar[dev1];$getVar[dev2];**Developer command**]
 `});

@@ -2,9 +2,12 @@ let c = "$replaceText[$replaceText[$checkCondition[$channelExists[$findChannel[$
 let m = "$replaceText[$replaceText[$checkCondition[$findChannel[$message[1]]==undefined];true;$message[1]];false;$message[2]]";
 let s =  "$replaceText[$replaceText[$checkCondition[$message[2]==];true;$message[1]];false;$message[2]]";
 let cn = "$getServerVar[prefix]slowmode";
+
 module.exports = ({
 name: "slowmode",
 aliases: ["setslowmode", "sm", "setsm"],
+description: "Sets the slowmode for a provided channel (In Seconds)",
+usage: "m?slowmode <time>",
 code: `
 $channelSendMessage[$channelID[];{title:$channelName[${c}] | Set slowmode to ${s} seconds!}{color:GREEN}]
 

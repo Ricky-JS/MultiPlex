@@ -1,8 +1,10 @@
-const { Status, HypeSquad } = require('C:/Users/fredd/OneDrive/Documents/Eyaqtron/Eyaqtron/config/emojis.json')
+const { Status, HypeSquad } = require('../../../config/emojis.json')
 
 module.exports = ({
     name: "userinfo",
     aliases: ["ui"],
+    description: "Provides information on the provided user",
+    usage: "m?userinfo <user>",
     code: `
     $color[#00FFFF]
     $thumbnail[$userAvatar[$findUser[$replaceText[$replaceText[$checkCondition[$message[]==];true;$authorID];false;$message[]]]]]

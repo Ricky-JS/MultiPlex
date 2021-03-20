@@ -1,6 +1,8 @@
 module.exports = ({
     name: "animequote",
     aliases: ["aq"],
+    description: "Some quotes from animes!",
+    usage: "m?animequote",
     code: `
     $color[$getRoleColor[$highestRole[$authorID]]]
     $author[Anime: $api[https://some-random-api.ml/animu/quote;anime]]

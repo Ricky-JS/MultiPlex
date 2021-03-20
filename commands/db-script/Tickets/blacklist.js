@@ -1,6 +1,8 @@
 module.exports = ({
 name: "blacklist",
 aliases: ["blist", "bl"],
+description: "Blacklist a user from ticket system",
+usage: "e?blacklist <user>",
 code: `
 $onlyIf[1==2;{execute:blacklist}]
 
@@ -15,4 +17,7 @@ $onlyIf[$userExists[$findUser[$message[2]]]==true;:x: Not a valid User!]
 $onlyIfMessageContains[add;remove;:x: First argument must be \`add\` or \`remove\`! $getServerVar[prefix]blacklist <add/remove> (user)!]
 
 $suppressErrors[:x: An error occurred.]
+
+
+ $onlyIf[$guildID==792683382563799060;{title:Tickets can only be used in the Support Server. They will be set for Public use soon!}{color:RED}]
 `});

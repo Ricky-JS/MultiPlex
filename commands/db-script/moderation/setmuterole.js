@@ -1,8 +1,8 @@
-const {mode} = require('C:/Users/fredd/OneDrive/Documents/Eyaqtron/Eyaqtron/config/dev.json');
-
 module.exports = ({
 name: "setmuterole",
 aliases: ["smr", "setmute", "muterole"],
+description: "Sets the Mute Role. This role will be given when a user is muted",
+usage: "m?setmuterole <role>",
 code: `
 $setServerVar[Muted;$findRole[$message[1]]]
 $title[Muted Role Set]
@@ -13,5 +13,5 @@ $onlyIf[$roleExists[$findRole[$message[1]]]==true;Please provide a role name, id
 $onlyPerms[manageroles;Uh Oh. You don't have permission to use this command. \`\`\`Manage Roles\`\`\`]
 
 
-${mode}
+$suppressErrors[{title:That's not right?}{description:Something went wrong. If this continues, Try contacting my support team}{color:RED}]
 `});

@@ -3,10 +3,12 @@ let p = "$getServerVar[prefix]";
 
 module.exports = ({
 name: "suggestions",
+description: "Config your servers suggestions",
+usage: "m?suggestions <option> <field>",
 code: `
 $description[**$replaceText[$replaceText[$replaceText[$replaceText[$message[1];enable;Suggestions];mod;Moderator Role];blist;Blacklisted Role];channel;Suggestions Channel]** has been set to $replaceText[$replaceText[$replaceText[$replaceText[$message[1];mod;<@&$findRole[$message[2]]>];blist;<@&$findRole[$message[2]]>];channel;<#$findChannel[$message[2]]>];enable;Enabled!]]
 $color[$random[00000;99999]]
-$footer[Eyaqtron Suggestions]
+$footer[MultiPlex Suggestions]
 $addTimestamp
 $setServerVar[$replaceText[$replaceText[$replaceText[$replaceText[$message[1];blist;blistrole];mod;modrole];channel;suggestchannel];enable;suggestions];$replaceText[$replaceText[$replaceText[$replaceText[$message[1];blist;$findRole[$message[2]]];mod;$findRole[$message[1]]];channel;$findChannel[$message[2]]];enable;Enabled]]
 
@@ -14,8 +16,8 @@ $setServerVar[$replaceText[$replaceText[$replaceText[$replaceText[$message[1];bl
 $onlyIf[$replaceText[$replaceText[$replaceText[$replaceText[$message[1];blist;$roleExists[$findRole[$message[2]]]];channel;$channelExists[$findChannel[$message[2]]]];mod;$roleExists[$findRole[$message[2]]]];enable;true]==true;:x: Invalid Arguments in \`${cmd} $message[1] <option>\`!]
 $onlyIf[$message[3]==;**:x: Something isn't right.. Maybe try to *not* defined a 3rd argument -_-**]
 $onlyIf[$checkContains[$message[1];enable;mod;blist;channel]==true;**:x: \`$message[1]\` isn't a valid option! Use \`${cmd} help\` for help!**]
-$onlyIf[$checkCondition[$message[1]==]==false;{title:Welcome to Eyaqtron Suggestions}
-{description:Eyaqtron makes suggestions so much easier!
+$onlyIf[$checkCondition[$message[1]==]==false;{title:Welcome to MultiPlex Suggestions}
+{description:MultiPlex makes suggestions so much easier!
 How to use!
 \`\`\`
 ${cmd} <option> <field>
@@ -31,7 +33,7 @@ Options - channel, blist, mod, enable
 
 $onlyIf[$message[1]!=help;{author:Tip - Use "${cmd} reset" to reset settings!}
 {title:Suggestion Help}
-{description:How to use Eyaqtron Suggestions!\n
+{description:How to use MultiPlex Suggestions!\n
 \`${cmd} <option> <field>\`
 
 Options - channel, blist, mod, enable
@@ -49,7 +51,7 @@ ${cmd} blist Muted
 ${cmd} mod Moderators
 ${cmd} enable
 \`\`\`}
-{footer:Eyaqtron | Suggestions Help}
+{footer:MultiPlex | Suggestions Help}
 {color:RANDOM}]
 $onlyIf[$message[1]!=reset;{execute:suggest-reset}]
 

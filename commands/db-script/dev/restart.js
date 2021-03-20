@@ -2,9 +2,8 @@ module.exports = ({
 name: "restart",
 aliases: ["reboot"],
 code: `
-$exec[node bot.js]
+$exec[node index.js]
 
-<a:loading:793734232349868033> Rebooting Server...
-
+**WARNING:** The bot is now in the process of rebooting. Please allow up-to 10 seconds for all systems to start up!
 $onlyForUsers[$getVar[dev1];**Developer command**]
 `})

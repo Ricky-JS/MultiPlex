@@ -1,29 +1,28 @@
-const { Status } = require('C:/Users/fredd/OneDrive/Documents/Eyaqtron/Eyaqtron/config/emojis.json')
+const {Status} = require('../../../config/emojis.json')
 
 module.exports = ({
     name: "bot",
+    description: "Get some information about the bot",
+    usage: "m?bot",
     code: `$title[Bot Information]
     $color[$getRoleColor[$highestRole[$client[id]]]]
-    $thumbnail[$client[avatarURL]]
+    $thumbnail[$client[avatarurl]]
     $description[
   $replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$replaceText[$status[$client[id]];dnd;${Status.DND}
   ];online;${Status.Online}
   ];invisible;${Status.Offline}];idle;${Status.Restarting}
   ];streaming;${Status.Streaming}
-  ];offline;${Status.Offline}] {hyper:Invite the bot here:https://discord.com/api/oauth2/authorize?client_id=792692510480138300&permissions=2147483639&scope=bot}
+  ];offline;${Status.Offline}] {hyper:Invite the bot here:https://discord.com/api/oauth2/authorize?client_id=$client[id]&permissions=2147483639&scope=bot}
   
   $addField[__Botlists listed on__;
-None
+{hyper:Cyclone Bot List:https://cyclonebots.xyz/bots/792692510480138300/}
+{hyper:Botrix:https://botrix.cc/bots/792692510480138300}
 ]
   
   $addField[__Other__;
 Version: $getVar[version]
 Created $creationTime[$client[id]] ago
 $creationDate[$client[id]]
-  ]
-  
-  $addField[__Uptime__;
-$replaceText[$replaceText[$replaceText[$replaceText[$uptime;d;d, ];h;h, ];m;m, ];s;s, ]
   ]
   
   $addField[__Users__;
@@ -37,20 +36,17 @@ $serverCount
   $addField[__RAM usage__;
 $memoryMB
   ]
-  
-  $addField[__Hosting__;
-undefined  ]
-    
+      
   $addField[__Status__;
-undefined
+$client[status]
   ]
   
   $addField[__Developer__;
-$tag[672215920558604332]
+$tag[$getVar[dev1]]
   ]
   
   $addField[__Bot__;
-$client[name]#$client[discriminator]
+$tag[$client[id]]
 $client[id]
   ]
   ]

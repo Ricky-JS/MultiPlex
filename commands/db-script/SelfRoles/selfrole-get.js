@@ -2,6 +2,7 @@ module.exports = ({
     name: "selfrole-get",
     aliases: ["sr-g", "sr-get"],
     description: "Give yourself a selfrole in the variable channel",
+    usage: "m?selfrole-get <slot>",
     code: `$setServerVar[arg1;None] $setServerVar[arg2;None]
     $title[Role Applied to $username[]#$discriminator[]]
 $thumbnail[$authorAvatar[webp;true;128]]

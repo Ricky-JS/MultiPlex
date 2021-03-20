@@ -1,5 +1,7 @@
 module.exports = ({
     name: "decode",
+    description: "Decode a binary/base64 message!",
+    usage: "m?decode <binary/base64> <code>",
     code: `
       $title[Decoded format - $message[1]]
       $color[$getRoleColor[$highestRole[$authorID]]]

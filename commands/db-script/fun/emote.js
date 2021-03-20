@@ -1,15 +1,22 @@
 module.exports = ({
     name: "emote",
     aliases: ["emoji"],
+    description: "Get an emoji from name or ID (CANNOT USE RAW EMOJI)",
+    usage: "m?emote <emoji>",
     code:`
-    $color[RANDOM]
-    $author[Name - $messageSlice[>1]]
-    $title[ID - $findEmote[$messageSlice[>1]]]
-    $image[https://cdn.discordapp.com/emojis/$findEmote[$messageSlice[>1]].$message[1]]
+$color[RANDOM]
+  $author[$emoji[$findEmote[$message[]];name] - (ID: $emoji[$findEmote[$message[]];id])]
+  $image[$emoji[$findEmote[$message[]];url]]
 
-    $onlyIf[$findEmote[$messageSlice[>1]]!=false;**That's not an emoji. Type the *name* of an emoji from this server only**]
-    $onlyIfMessageContains[gif;png;**Please specify the emoji as a \`gif\` or \`png\`, then type the name of an emoji from this server!**]
-    $onlyIf[$message[]!=;**Please specify the emoji as a \`gif\` or \`png\`, then type the name of an emoji from this server!**]
+$onlyIf[$emoji[$findEmote[$message[]];isdeleted]==false;
+{title:Failed to find that emoji}
+{color:RED}]
 
+$onlyIf[$findEmote[$message[]]!=undefined;
+{title:Failed to find that emoji}
+{color:RED}]
 
+$onlyIf[$message[]!=;
+{title:Input an emoji name or ID (CANNOT USE RAW EMOJI)}
+{color:RED}]
 `})

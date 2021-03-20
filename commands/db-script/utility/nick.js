@@ -1,5 +1,7 @@
 module.exports = ({
     name: "nick",
+    description: "Gives options to set a users nickname",
+    usage: "m?nick <user>",
     code: `
 $awaitReactions[1️⃣,2️⃣,3️⃣,4️⃣,5️⃣;$authorID;30s;Hoisting,unmentionable,randomname,takenick,nonick;<@$authorID> You took too long to react so no action has been made!]
 $addReactions[1️⃣;2️⃣;3️⃣;4️⃣;5️⃣]
@@ -35,5 +37,6 @@ $onlyIf[$findUser[$message[]]!=undefined;That user doesn't exist or is not in th
 $onlyIf[$message[1]!=;Please state **who's** nickname you want me to change in the command! You can use mentions, IDs and usernames]
 $onlyBotPerms[managenicknames;I am missing **manage nicknames** permission!]
 $onlyPerms[managenicknames;You are missing **manage nicknames** permission!]
-    `
-});
+
+$enabled[no;:x: This command is under maintenance. Use \`$getServerVar[prefix]renick\` to set a users nickname. Sorry for the inconvenience.]
+`});

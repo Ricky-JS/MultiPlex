@@ -1,5 +1,7 @@
 module.exports = ({
     name: "afk",
+    description: "Need to go? Here's a nice little afk command to alert your buddies!",
+    usage: "m?afk <optional-reason>",
     code: `
     <@$authorID> you went AFK! - **$replaceText[$replaceText[$checkCondition[$message[]==];true;I'm unavailable right now, be back later];false;$replaceText[$message[];@;]]**
 

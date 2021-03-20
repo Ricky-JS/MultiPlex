@@ -2,6 +2,7 @@ module.exports = ({
     name: "selfrole-channel",
     aliases: ["sr-c", "sr-channel"],
     description: "Sets a selfrole channel for commands to only be executed in the channel that is set",
+    usage: "m?selfrole-channel <channel>",
     code: `
 Selfrole channel is set! Selfrole give/take commands can only be executed in <#$findChannel[$message[]]>!
     

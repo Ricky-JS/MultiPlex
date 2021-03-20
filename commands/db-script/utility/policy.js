@@ -2,7 +2,7 @@ module.exports = ({
     name: "policy",
     code: `
     $thumbnail[$userAvatar[$client[id]]]
-    $author[Eyaqtron]
+    $author[MultiPlex]
     $title[Privacy Policy]
     $color[RED]
 

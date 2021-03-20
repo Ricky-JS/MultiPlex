@@ -1,6 +1,7 @@
 module.exports = ({
     name: "selfrole-add",
     description: "Sets a server selfrole",
+    usage: "m?selfrole-add <slot> <role>",
     aliases: ["sr-a", "sr-add"],
     code: `
     $author[$serverName[$guildID[]];$serverIcon]

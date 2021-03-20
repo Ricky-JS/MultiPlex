@@ -1,7 +1,7 @@
-const {mode} = require('C:/Users/fredd/OneDrive/Documents/Eyaqtron/Eyaqtron/config/dev.json');
-
 module.exports = ({
 name: "embed",
+description: "Make me say an Embeded Message!",
+usage: "m?embed <title> + <desc> + <footer>",
 code: `
 $title[$splitText[1]]
 $description[$splitText[2]]
@@ -10,7 +10,4 @@ $color[$random[00000;99999]]
 $textSplit[$message[];+]
 $onlyIf[$message[3]!=;Provide a Title & Description - \`Footer (optional)\`. {$getServerVar[prefix]embed (title) + (desc) + (footer (optional))]
 $onlyIfMessageContains[$message[];+;Incorrect usage, use: $getServerVar[prefix]embed {title}+ {desc}+ {footer (optional)}]
-
-
-${mode}
 `});

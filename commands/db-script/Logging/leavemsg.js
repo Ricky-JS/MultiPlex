@@ -1,18 +1,18 @@
 module.exports = ({
     name: "leavemsg",
+    description: "Set the message for users to recieve upon leaving!",
+    usage: "m?leavemsg <message>",
     code: `
     $title[Leave message is set!]
-    $color[$replaceText[$getServerVar[leaveColor];undefined;RANDOM]]
+    $color[RANDOM]
     
     $addField[__Leave configuration__;
-Color - $splitContent[$getServerVar[leaveColor];1;undefined;\`$getServerVar[prefix]leavecolor <color>\`]
 Channel - $splitContent[<#$getServerVar[leaveChannel]>;1;<#undefined>;\`$getServerVar[prefix]leavechannel <#channel|ID|name>\`]
 Message - $splitContent[$getServerVar[leaveMsg];1;undefined;\`$getServerVar[prefix]leavemsg <message>\`]
 ]
 
     $addField[__Join configuration__;
 Mention - $replaceText[$replaceText[$checkCondition[$getServerVar[joinMention]==on];true;Enabled];false;Disabled]
-Color - $splitContent[$getServerVar[joinColor];1;undefined;\`$getServerVar[prefix]joincolor <color>\`]
 Channel - $splitContent[<#$getServerVar[joinChannel]>;1;<#undefined>;\`$getServerVar[prefix]joinchannel <#channel|ID|name>\`]
 Message - $splitContent[$getServerVar[joinMsg];1;undefined;\`$getServerVar[prefix]joinmsg <message>\`]
 ]
@@ -22,7 +22,6 @@ Message - $splitContent[$getServerVar[joinMsg];1;undefined;\`$getServerVar[prefi
     $onlyIf[$message[1]!=;
 {title:Want to set a custom message for when members leave the server?}
 {description:\`\`\`$getServerVar[prefix]leavemsg <type your message here>\`\`\`}
-{field:Get more info on this command:\`\`\`$getServerVar[prefix]leavemsg help\`\`\`}
 {color:RED}]
 
 $onlyBotPerms[managechannels;**I'm missing \`{perms}\` permissions**]

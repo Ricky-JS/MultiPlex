@@ -2,6 +2,7 @@ module.exports = ({
     name: "selfrole-take",
     description: "Takes away one of the listed selfroles in this channel",
     aliases: ["sr-t", "sr-take"],
+    usage: "m?selfrole-take <slot>",
     code: `$setServerVar[arg1;None] $setServerVar[arg2;None]
     $title[Role Removed from $username[]#$discriminator[]]
 $thumbnail[$authorAvatar[webp;true;128]]

@@ -1,6 +1,8 @@
 module.exports = ({
     name: "animalfact",
     aliases: ["anifact", "af"],
+    description: "Cool facts about animals!",
+    usage: "m?anifact <animal>",
     code: `
     $title[Cool $toLowercase[$message[1]] fact!]
     $color[$getRoleColor[$highestRole[$authorID]]]

@@ -1,5 +1,7 @@
 module.exports = ({
     name: "joke",
+    description: "Want some funny haha's? JOKES!",
+    usgae: "m?joke",
     code: `
     $title[Here's a joke for you]
     $color[$getRoleColor[$highestRole[$authorID]]]

@@ -1,5 +1,7 @@
 module.exports = ({
     name: "encode",
+    description: "Encode a binary/base64 message!",
+    usage: "m?encode <binary/base64> <code>",
     code: `
       $title[Encoded format - $message[1]]
       $color[$getRoleColor[$highestRole[$authorID]]]

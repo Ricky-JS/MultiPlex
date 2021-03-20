@@ -14,5 +14,6 @@ $onlyIfMessageContains[on;off;{title:Current status}
 {color:RANDOM}]
 
 
+$enable[no;:x: Bruh. you removed it cause repl == bad]
 $onlyForUsers[$getVar[dev1];$getVar[dev2];**Developer command**]
 `})

@@ -2,6 +2,9 @@ let u = "$findUser[$message[1]]";
 
 module.exports = ({
 name: "clearwarns",
+aliases: ["cw"],
+description: "Clears the user warns",
+usage: "m?clearwarns <user>",
 code: `
 
 $setUserVar[infractions;Undefined;${u}]
@@ -12,4 +15,6 @@ $channelSendMessage[$channelID[];$replaceText[$replaceText[$checkCondition[$getU
 
 $onlyIf[$userExists[${u}]==true;{title:That user doesn't exist or isn't in the server}{color:RED}]
 $onlyPerms[managemessages;{title:You do not have permission to run this command}{color:RED}]
+
+$suppressErrors[{title:That's not right?}{description:Something went wrong. If this continues, Try contacting my support team}{color:RED}]
 `});

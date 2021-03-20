@@ -1,19 +1,19 @@
 module.exports = ({
     name: "joinchannel",
+    description: "Set the Join channel for the bot to welcome new users!",
+    usage: "m?joinchannel <channel>",
     code: `
     $title[Join channel has been set!]
-    $color[$replaceText[$getServerVar[joinColor];undefined;RANDOM]]
+    $color[RANDOM]
     $thumbnail[$serverIcon]
 
     $addField[__Leave configuration__;
-Color - $splitContent[$getServerVar[leaveColor];1;undefined;\`$getServerVar[prefix]leavecolor <color>\`]
 Channel - $splitContent[<#$getServerVar[leaveChannel]>;1;<#undefined>;\`$getServerVar[prefix]leavechannel <#channel|ID|name>\`]
 Message - $splitContent[$getServerVar[leaveMsg];1;undefined;\`$getServerVar[prefix]leavemsg <message>\`]
 ]
 
     $addField[__Join configuration__;
 Mention - $replaceText[$replaceText[$checkCondition[$getServerVar[joinMention]==on];true;Enabled];false;Disabled]
-Color - $splitContent[$getServerVar[joinColor];1;undefined;\`$getServerVar[prefix]joincolor <color>\`]
 Channel - $splitContent[<#$getServerVar[joinChannel]>;1;<#undefined>;\`$getServerVar[prefix]joinchannel <#channel|ID|name>\`]
 Message - $splitContent[$getServerVar[joinMsg];1;undefined;\`$getServerVar[prefix]joinmsg <message>\`]
 ]

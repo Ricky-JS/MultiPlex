@@ -1,9 +1,11 @@
-const { Status, Other } = require('C:/Users/fredd/OneDrive/Documents/Eyaqtron/Eyaqtron/config/emojis.json')
+const { Status, Other } = require('../../../config/emojis.json')
 
 
 module.exports = ({
     name: "serverinfo",
     aliases: ["server", "guild", "guildinfo", "si", "gi"],
+    description: "Gets info the the current Guild",
+    usage: "m?serverinfo",
     code: `
     $title[Server information]
   $thumbnail[$serverIcon]

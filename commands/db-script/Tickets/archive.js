@@ -1,5 +1,7 @@
 module.exports = ({
     name: "archive",
+    description: "archive an existing ticket. The owner can no longer see it. Close command wont work if channel is archived!",
+    usage: "e?archive",
     code: `
     $onlyIf[1==2;{execute:archive}]
     
@@ -16,4 +18,7 @@ module.exports = ({
     $onlyIf[$channelID[]==$getUserVar[ticketchannel;$getChannelVar[ticketowner]];:x: This isn't a ticket]
     $suppressErrors[:x: An error occurred.]
     $onlyIf[$getVar[blacklist;$authorID]==false;:x: You've been blacklisted from using Eyaqtron Ticket System!]
+
+
+ $onlyIf[$guildID==792683382563799060;{title:Tickets can only be used in the Support Server. They will be set for Public use soon!}{color:RED}]
     `});

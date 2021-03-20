@@ -1,12 +1,16 @@
-const {mode} = require('C:/Users/fredd/OneDrive/Documents/Eyaqtron/Eyaqtron/config/dev.json');
-
 module.exports = ({
 name: "coinflip",
+description: "Having trouble deciding? You can do a CoinFlip!",
+usage: "m?coinflp <choice>",
 code: `
-$title[Okay, I'm flipping]
-$description[and the coin lands on $randomText[<:coin:793734454257647617>**Heads**;<:coin:793734454257647617>**Tails**]]
-$color[$random[00000;999999]]
+$editIn[500ms;{title:Coin Flip}{description:** **}{field:You Chose:$toLowercase[$message[1]]:yes}{field:I Picked:$randomText[Heads;Tails]:yes}{color:RANDOM}]
 
 
-${mode}
+$title[Okay, I'm flipping!]
+$color[RANDOM]
+
+
+
+
+$onlyIf[$checkContains[$toLowercase[$message[1]];heads;tails]==true;{title::x: Please choose Heads or Tails}{color:RED}]
 `});

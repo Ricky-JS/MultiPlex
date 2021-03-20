@@ -1,6 +1,8 @@
 module.exports = ({
     name: "invite",
     aliases: ["inv"],
+    description: "Get the bots Invite URL",
+    usage: "m?invite",
     code: `
 $thumbnail[$userAvatar[$client[id]]]
 $color[$getRoleColor[$highestRole[$authorID]]]

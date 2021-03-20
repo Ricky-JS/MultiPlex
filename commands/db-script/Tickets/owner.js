@@ -1,5 +1,7 @@
 module.exports = ({
     name: "owner",
+    description: "Changes the ticket owner",
+    usage: "e?owner <user>",
     code: `
     $onlyIf[1==2;{execute:new-owner}]
     
@@ -17,4 +19,7 @@ module.exports = ({
     
     
     $suppressErrors[:x: An error occurred.]
+  
+  
+   $onlyIf[$guildID==792683382563799060;{title:Tickets can only be used in the Support Server. They will be set for Public use soon!}{color:RED}]
     `});

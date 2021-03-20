@@ -3,12 +3,14 @@ let reason = "$replaceText[$replaceText[$checkCondition[$messageSlice[>1]!=];tru
 
 module.exports = ({
 name: "warn",
+description: "Warns a user for a reason",
+usage: "m?warn <user> <optional-reason>",
 code: `
 $sendWebhook[$getServerVar[logs];{title:User Warned}{description:
     Username: $tag[${u}]
     User ID: ${u}
     Action By: $tag[$authorID]
-    Reason: ${reason}}{footer:Eyaqtron Logging}{color:RANDOM}]
+    Reason: ${reason}}{footer:MultiPlex Logging}{color:RANDOM}]
 $onlyIf[$webhook[$getServerVar[logs];exists]==true;]
 
 $channelSendMessage[$channelID[];$replaceText[$replaceText[$checkCondition[$webhook[$getServerVar[logs];exists]==true];true;{title:$tag[${u}] has been warned for "${reason}"}{color:GREEN}];false;{title:$tag[${u}] has been warned for "${reason}"}{author:⚠️ Your logging channel isn't set. Use "$getServerVar[prefix]logs" for future logging!}{color:GREEN}]]

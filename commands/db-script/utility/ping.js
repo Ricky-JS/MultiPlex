@@ -1,9 +1,7 @@
-const {mode} = require('C:/Users/fredd/OneDrive/Documents/Eyaqtron/Eyaqtron/config/dev.json');
-
 module.exports = ({
 name:"ping",
+description: "Gets the bots Latency",
+usage: "m?ping",
 code: `
 **Bot Ping**: \`$pingms\`
-
-${mode}
 `});

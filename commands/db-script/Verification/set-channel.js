@@ -6,10 +6,11 @@ module.exports = ({
     $thumbnail[$serverIcon]
 $author[$serverName[$guildID];$serverIcon]
 $title[Verification channel is set!]
-$color[$getVar[color]]
+$color[RANDOM]
 $description[
 <#$findChannel[$message[]]>
 New members will receive a greeting in this channel with a unique verification code to verify themselves with.
+
 
 **$replaceText[$replaceText[$checkCondition[$getServerVar[verifyrole]==undefined];true;Don't forget to set the Security role!];false;You're all set up! $replaceText[$replaceText[$checkCondition[$getServerVar[totalkickstrikes]==undefined];true;You can optionally set up autokick for \`X\` amount of incorrect attempts:
 \`$getServerVar[prefix]set-autokick <numberStrikes>\`];false;Autokick is enabled with $getServerVar[totalkickstrikes] strikes!]]**

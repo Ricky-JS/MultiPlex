@@ -1,7 +1,6 @@
-const {mode} = require('C:/Users/fredd/OneDrive/Documents/Eyaqtron/Eyaqtron/config/dev.json');
-
 module.exports = ({
 name: "8ball",
+description: "Have a question that neets answering? Our 8ball command is good for that!",
 code: `
 $title[$message[]]
 $description[The Magic 8 Ball says: *Drumroll please?*
@@ -10,5 +9,4 @@ $randomText[It is certain!;Yes.;No.;I don't think so..;Without a doubt!;Only tim
 $footer[8Ball question by $username[$authorID];$authorAvatar[webp;true;1024]]
 $onlyIf[$message[]!=;You must provide a query]
 
-${mode}
 `});

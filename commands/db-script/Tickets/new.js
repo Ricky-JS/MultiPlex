@@ -1,5 +1,7 @@
 module.exports = ({
     name: "new",
+    description: "creates a new ticket",
+    usage: "e?new",
     code: `
     $onlyIf[1==2;{execute:new-ticket}]
     
@@ -13,4 +15,9 @@ module.exports = ({
     
     
     $onlyIf[$getVar[blacklist;$authorID]==false;:x: You've been blacklisted from using Eyaqtron Ticket System!]
+ 
+ 
+ 
+ 
+ $onlyIf[$guildID==792683382563799060;{title:Tickets can only be used in the Support Server. They will be set for Public use soon!}{color:RED}]
     `});

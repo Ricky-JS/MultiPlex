@@ -2,6 +2,7 @@ module.exports = ({
     name: "selfrole-remove",
     aliases: ["sr-r", "sr-remove"],
     description: "Removes a server selfrole",
+    usage: "m?selfrole-remove <slot>",
     code: `
     $author[$serverName[$guildID];$serverIcon]
     $thumbnail[$serverIcon]

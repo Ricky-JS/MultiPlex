@@ -1,7 +1,7 @@
-const {mode} = require('C:/Users/fredd/OneDrive/Documents/Eyaqtron/Eyaqtron/config/dev.json');
-
 module.exports = ({
 name: "snipe",
+description: "Gets the most recent deleted message of the channel",
+usage: "m?snipe",
 code: `
 $editIn[500ms;Getting Author Information...;{title:$tag[$getChannelVar[user]]}
 {description:$getChannelVar[snipes]}
@@ -12,6 +12,4 @@ $editIn[500ms;Getting Author Information...;{title:$tag[$getChannelVar[user]]}
 {timestamp}]
 
 Gathering Messsages...
-
-${mode}
 `});

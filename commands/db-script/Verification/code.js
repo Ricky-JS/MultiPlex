@@ -2,7 +2,7 @@ module.exports = ({
     name: "code",
     code: `
 <@$authorID>
-$color[$getVar[color]]
+$color[RANDOM]
 $author[Simply type your new security code!]
 $title[$replaceText[$replaceText[$checkCondition[$getServerVar[totalkickstrikes]==undefined];false;Auto-Kick is enabled!];true;5 second cooldown!]]
 $description[> **$random[100000;999999]**

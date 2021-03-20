@@ -1,5 +1,7 @@
 module.exports = ({
     name: "renick",
+    description: "Set a custom nickname for a user",
+    usage: "m?renick <user> <new nick>",
     code: `
     $setNickname[$findUser[$message[1]];$messageSlice[>1]]
 $color[$getRoleColor[$highestRole[$findUser[$message[1]]]]]

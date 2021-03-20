@@ -1,13 +1,12 @@
-const {mode} = require('C:/Users/fredd/OneDrive/Documents/Eyaqtron/Eyaqtron/config/dev.json');
+let u = "$replaceText[$replaceText[$checkCondition[$userExists[$findUser[$message[1]]]==true];true;$findUser[$message[1]]];false;$authorID]";
 
 module.exports = ({
 name: "avatar",
+description: "Get the avatar of someone",
+usage: "m?avatar / e?avatar <user>",
 code: `
-$title[Avatar for $username[$mentioned[1;yes]]#$discriminator[$mentioned[1;yes]]]
-$image[$userAvatar[$mentioned[1;yes]]]
+$title[Avatar for $username[${u}]#$discriminator[${u}]]
+$image[$userAvatar[${u};jpg;true;1024]]
 $color[$random[00000;99999]]
-$footer[Avatar of $username[$mentioned[1;yes]];$userAvatar[$mentioned[1;yes]]]
-
-
-${mode}
+$footer[Avatar of $username[${u}];$userAvatar[${u};jpg;true;1024]]
 `});

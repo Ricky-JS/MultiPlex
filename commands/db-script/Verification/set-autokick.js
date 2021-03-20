@@ -3,7 +3,7 @@ module.exports = ({
     aliases: ["set-ak"],
     code: `
     $setServerVar[totalkickstrikes;$message[1]]
-$color[$getVar[color]]
+$color[RANDOM]
     $title[Autokick has been enabled!]
     $description[$message[1] incorrect attempts = Autokick]
 

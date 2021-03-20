@@ -2,6 +2,7 @@ module.exports = ({
     name: "selfroles",
     description: "See the panel of server Selfroles if any are set",
     aliases: ["sr", "selfrole"],
+    usage: "m?selfroles",
     code: `
     $author[$serverName[$guildID];$serverIcon]
     $title[Server Selfroles]
