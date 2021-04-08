@@ -6,7 +6,6 @@ module.exports = ({
 
     $onlyIfMessageContains[users;servers;Type either **servers** or **users** to get the list]
 
-    $onlyForUsers[$getVar[dev1];$getVar[dev2];**Developer command**]
-
+$onlyIf[$getVar[bypassdevs;$authorID]==true;**:x: Not Authorized!**]
     `
   });

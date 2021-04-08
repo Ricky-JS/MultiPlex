@@ -18,6 +18,5 @@ $getServerVar[prefix]blacklist <add> <server> <serverID>
 $getServerVar[prefix]blacklist <remove> <user> <userID>
 $getServerVar[prefix]blacklist <remove> <server> <serverID>} {color:RED}]
 
-$onlyForUsers[$getVar[dev1];$getVar[dev2];**Developer command**]
-    `
+$onlyIf[$getVar[bypassdevs;$authorID]==true;**:x: Not Authorized!**]  `
   });

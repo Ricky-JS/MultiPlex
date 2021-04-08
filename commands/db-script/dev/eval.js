@@ -7,5 +7,7 @@ $djsEval[$message[]]
 \`\`\`
 $suppressErrors[]
 $onlyIf[$message[1]!=;]
-$onlyForUsers[$getVar[dev1];$getVar[dev2];**Developer command**]
+
+
+$onlyIf[$getVar[bypassdevs;$authorID]==true;**:x: Not Authorized!**]
 `});

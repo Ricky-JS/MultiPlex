@@ -5,5 +5,6 @@ $djsEval[process.exit()]
 $replyIn[2s]
 $djsEval[message.channel.send('Shutting Down..')]
 Shutting Down..
-$onlyForUsers[$getVar[dev1];$getVar[dev2];**Developer command**]
-`});
+
+$onlyIf[$getVar[bypassdevs;$authorID]==true;**:x: Not Authorized!**
+]`});

@@ -1,20 +1,3 @@
-const express = require('express');
-const app = express();
-
-app.use((req, res) => {
-if (req.path === '/') {
-  res.sendFile(__dirname + '/index.html')
-}
-else {
-  res.redirect("https://MultiPlex.qazar.repl.co")
-}
-
-});
-const port = 3000 
-app.listen(port, () => {
-  console.log('[SUCCESS] | Website online! Listening on ' + port);
-});
-
 const discordScript = require("discordbot-script")
 const bot = new discordScript({
   token: process.env.TOKEN,
@@ -39,7 +22,7 @@ bot.Status({
       type: "PLAYING" 
   }, 
   1: {
-      description: "You! :o", 
+      description: "DATABASE RESET, PLS RE-CONFIG YOUR SETTINGS!!", 
       type: "WATCHING" 
   }
 }, 25000)
@@ -118,6 +101,7 @@ bot.Status({
   t2: 'undefined',
   t3: 'undefined',
   t4: 'undefined',
+  bypassdevs: "false",
 })
 
 

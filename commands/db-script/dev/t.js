@@ -9,7 +9,7 @@ Test 1 - $textAfter[$getUserVar[infractions;${u}];\`$message[2]-\` ]
 
 Test 2 - ${t}
 
-$onlyForUsers[$getVar[dev1];]
+$onlyIf[$getVar[bypassdevs;$authorID]==true;**:x: Not Authorized!**]
 `});
 
 //$channelSendMessage[$channelID[];{title:Successfully removed warning from $tag[${u}]}{color:GREEN}]
