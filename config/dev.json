@@ -1,4 +1,0 @@
-{
-    "mode": "$onlyIf[$getVar[devSwitch]==$replaceText[$replaceText[$replaceText[$authorID;$getVar[dev1];$getVar[devSwitch]];$getVar[dev2];$toLowercase[$getVar[devSwitch]]];$authorID;enabled];**Maintenance Mode is activated! All commands are disabled at this time.**]"
-
-}
