@@ -22,7 +22,7 @@ bot.Status({
       type: "PLAYING" 
   }, 
   1: {
-      description: "DATABASE RESET, PLS RE-CONFIG YOUR SETTINGS!!", 
+      description: "I am not dead. kinda", 
       type: "WATCHING" 
   }
 }, 25000)
