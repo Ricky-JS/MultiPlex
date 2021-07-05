@@ -1,6 +1,6 @@
 const discordScript = require("discordbot-script")
 const bot = new discordScript({
-  token: process.env.TOKEN,
+  token: "NzkyNjkyNTEwNDgwMTM4MzAw.X-habg.oYaPFE-91s2hZMzqFghLl_uODq0",
   prefix: [process.env.Prefix1, process.env.Prefix2, process.env.Prefix3]
 });
 bot.MessageEvent()
